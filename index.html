@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera pagina web.</title>
 </head>
-<body>
-    <h1>BIENVENIDOS AL CURSO</h1>
+<body style="background-color: beige;">
+    <!--contenedor de menu nav-->
+    <nav id="inicio">
+        <a href="#presentacion">PRESENTACION</a> &emsp; <!-- EL &emsp sirve para añadir un espacio entre lineas -->
+        <a href="#links">LINK DE LA INSTITUCION</a> &emsp;<!-- el # es el simbolo qu eindica una palabra clave -->
+        <a href="#imagenes">IMAGENES</a> &emsp;
+        <a href="#listas">LISTAS ACADEMICAS</a>&emsp;
+        <a href="#tabla">TABLA DE LOS CLUBES</a>&emsp;
+        <a href="Todo_sobre_mi_persona.html" target="_blank">TODO SOBRE MI PERSONA</a>&emsp;
+    </nav>
+    <h1 id="presentacion">BIENVENIDOS AL CURSO</h1>
     <p>CURSO: LENGUAJES PARA EL DESARROLLO Y SOPORTE DE SISTEMAS 
     </p> <!--el parrafo coloca un enter automatico-->
     <P>NOMBRE: OSCAR <br>
         APELLIDO : NUNTON <br>
         DISTRITO: SAN JUAN DE LURIGANCHO <br>
         CARGO : ALUMNO
+        <hr style="height: 3px; border: dotted green ;background-color: aqua;">
     </P>
     <h2> EVALUACIONES DEL CURSO</h2>
     <h3> Evidencia 1</h3>
@@ -23,10 +33,116 @@
     <h4 style="font-size: 50%;"> JAVASCCRIPT</h4> <!--el porcentaje se adapta a las dimenciones del dispositivo-->
     <h3 style="font-size: 40px;"> Evidencia 4</h3><!--el px muestra el tamaño de las letras en pixeles-->
     <h4 style="font-size: 2em;"> FIREBASE</h4><!-- el em muestra el tamaño de las letras en millas -->
+    <br>
+    <a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
+<hr style="height: 2px; border: double yellow; background-color: black;">
+<!--tipo de borde solid= compacta ; dotted=punteado ; double= doble linea  -->
+<br><!-- el br añade un salto de linea visible en la pagina-->
 
+<h2 id="links">USO DE LINKS</h2><!-- el id es el comando qu enlaza la el link del menu inicial-->
+<p>LINKS DE LA INSTITUCION</p>
+ <a href="https://www.certus.edu.pe/" target="_blank">ENLACE CERTUS</a><br>
+<a href="https://intranet.certus.edu.pe/Login"target="_blank">PORTAL CERTUS</a><br>
+<a href="https://www.certus.edu.pe/sede/san-juan-de-lurigancho/"target="_blank">MI SEDE</a><!--el target blank sirve para abrir los links o enlaces en otra pestaña-->
+<br>
+<a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
+<hr style="height: 3px; border: dotted black; background-color: aliceblue;">
+<h2 id="imagenes">USO DE IMAGENES</h2>
+<p>IMAGENES DE MASCOTAS</p>
+<img src="mascota_3.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<img src="mascota 4.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<img src="mascota_5.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<img src="mascota-6.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<p>LOS MEJORES EQUIPOS DEL MUNDO</p>
+<img src="ESCUDOS/Escudo_Alianza_Lima..png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px">
+<img src="ESCUDOS/Escudo_Manchester_United_FC.png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<img src="ESCUDOS/Escudo_Real_Madrid.png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px">
+<img src="C:\Users\lab04b2-sjl2\Documents\GitHub\CERTUS_PROYECTOS\ESCUDOS" alt="IMAGEN NO CARGA CAMBIA TU WIFI">
+<!-- LA ULTIMA NO FUNCIONA SI CAMBIAS DE PC-->
 
+<p>IMAGENES DE ESCUDOS DE ATTACK ON TITAN</p>
+<img src="https://pm1.aminoapps.com/6434/02ed15ca9819fa6a9c946eac3c3a35d2f62345e4_hq.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="800px" style="border: solid white 20px;">
+<br>
+<a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
+<hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
+<br>
 
+<h2 id="listas">USO DE LISTAS</h2>
+    <p>CONOCIMINETOS PREVIOS PARA HTML EN ORDEN METEDEOLOGICO</p>
+    <ol type="I">
+        <li>OFIMATICA BASICA</li>
+        <li> GESTION DE CARPETAS</li>
+        <li> INSTALACION Y DESINSTALACION DE PROGRAMAS </li>
+    </ol><!-- el ol es para generar una lista ennumerada-->
+    <p>CUALIDADES Y BUENAS PRACTICAS A SEGUIR</p>
+    <ul> 
+        <li>Capacidad de atencion</li>
+        <li>Consultar dudas no resueltas</li>
+        <li>Repasar tareas y realizar tareas en casa</li>
+    </ul><!-- el ul es para generar una lista sin un orden especifico-->
+    <a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
+    <hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
+    <br>
+    <h2 id="tabla">USO DE TABLAS </h2>
+    <p>IMORMACIOND DE CLUBES</p>
+<table border="2px" style="background-color: azure; font-size: 25px;" >
+    <tr><!--el tr es para añadir una fila de la tabla cada vez que se quiere añadir se tiene que abrir un tr-->
+        <th>NOMBRE DEL CLUB</th><!--el th se usa solo en los encabezados de la tabla-->
+        <th>PAIS</th>
+        <th>PROVINCIA</th>
+        <th>FUNDACION</th>
+        <th>ESTADIO</th>
+        <th>ESCUDO</th>
+    </tr>
+    <tr>
+        <td>Alianza Lima</td><!--el td se usa para añadir la informacion dentro de las comlumnas de la tabla-->
+        <td>Peru</td>
+        <td>Lima</td>
+        <td>1901</td>
+        <td>Alejandro Villanueva</td>
+        <td><img src="ESCUDOS/Escudo_Alianza_Lima..png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px"></td>
+    </tr>
+    <tr>
+        <td>Manchester United</td>
+        <td>Inglaterra</td>
+        <td>Manchester</td>
+        <td>1878</td>
+        <td>Old Trafrod</td>
+        <td><img src="ESCUDOS/Escudo_Manchester_United_FC.png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px"></td>
+    </tr>
+    <tr>
+        <td>Real madrid</td>
+        <td>España</td>
+        <td>Madrid</td>
+        <td>1902</td>
+        <td>Santiago Bernabeu</td>
+        <td><img src="ESCUDOS/Escudo_Real_Madrid.png" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="200px" height="200px"></td>
+    </tr>
+</table><!-- el table es el comando para generar una tabla dentro de la pagina web-->
+<a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
 
+<hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
+
+<h2>USO DE VIDEOS</h2>
+
+<video src="Download.mp4" height="400px" autoplay muted>VIDEO NO CARGA</video>
+
+<hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
+
+<h2>VIDEO DE YOUTUBE</h2>
+<iframe width="560"
+ height="315"
+  src="https://www.youtube.com/embed/kLyXOxp93X4?si=-5Km5xD9df-9TOIV" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen></iframe>
+  
+  <hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
+
+<h2>USO DE AUDIO</h2>
+<audio src="saim.co.za - 50 Cent - Just A Lil Bit (320 KBps).mp3" controls loop autoplay>AUDIO NO SOPORTADO</audio>
 
 
 
