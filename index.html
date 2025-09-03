@@ -15,7 +15,7 @@
         <a href="#tabla">TABLA DE LOS CLUBES</a>&emsp;
         <a href="Todo_sobre_mi_persona.html" target="_blank">TODO SOBRE MI PERSONA</a>&emsp;
     </nav>
-    <h1 id="presentacion">BIENVENIDOS AL CURSO</h1>
+    <h1 id="presentacion" style="text-align: center;">BIENVENIDOS AL CURSO</h1>
     <p>CURSO: LENGUAJES PARA EL DESARROLLO Y SOPORTE DE SISTEMAS 
     </p> <!--el parrafo coloca un enter automatico-->
     <P>NOMBRE: OSCAR <br>
@@ -43,7 +43,8 @@
 <p>LINKS DE LA INSTITUCION</p>
  <a href="https://www.certus.edu.pe/" target="_blank">ENLACE CERTUS</a><br>
 <a href="https://intranet.certus.edu.pe/Login"target="_blank">PORTAL CERTUS</a><br>
-<a href="https://www.certus.edu.pe/sede/san-juan-de-lurigancho/"target="_blank">MI SEDE</a><!--el target blank sirve para abrir los links o enlaces en otra pestaña-->
+<a href="https://www.certus.edu.pe/sede/san-juan-de-lurigancho/"target="_blank">MI SEDE</a>
+<!--el target blank sirve para abrir los links o enlaces en otra pestaña-->
 <br>
 <a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
 <hr style="height: 3px; border: dotted black; background-color: aliceblue;">
@@ -61,30 +62,38 @@
 <!-- LA ULTIMA NO FUNCIONA SI CAMBIAS DE PC-->
 
 <p>IMAGENES DE ESCUDOS DE ATTACK ON TITAN</p>
-<img src="https://pm1.aminoapps.com/6434/02ed15ca9819fa6a9c946eac3c3a35d2f62345e4_hq.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="800px" style="border: solid white 20px;">
+<img src="https://pm1.aminoapps.com/6434/02ed15ca9819fa6a9c946eac3c3a35d2f62345e4_hq.jpg" 
+alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="800px" style="border: solid white 20px;">
 <br>
 <a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
 <hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
 <br>
 
 <h2 id="listas">USO DE LISTAS</h2>
-    <p>CONOCIMINETOS PREVIOS PARA HTML EN ORDEN METEDEOLOGICO</p>
-    <ol type="I">
+<div style="font-family: Arial, Helvetica, sans-serif;
+color: blue; background-color: aquamarine; 
+font-size: 20px; font-style: italic; text-align: center;">  
+<p>CONOCIMIENTOS PREVIOS PARA HTML EN ORDEN METEDEOLOGICO</p>
+    <ol type="I" align="left">
         <li>OFIMATICA BASICA</li>
         <li> GESTION DE CARPETAS</li>
         <li> INSTALACION Y DESINSTALACION DE PROGRAMAS </li>
     </ol><!-- el ol es para generar una lista ennumerada-->
-    <p>CUALIDADES Y BUENAS PRACTICAS A SEGUIR</p>
-    <ul> 
+</div>
+<div style="font-family: Georgia, 'Times New Roman', Times, serif;
+color: brown;background-color: aliceblue;
+ font-size: 25px; font-style: oblique; text-align: center; ">    <p>CUALIDADES Y BUENAS PRACTICAS A SEGUIR</p>
+    <ul align="left"> 
         <li>Capacidad de atencion</li>
         <li>Consultar dudas no resueltas</li>
         <li>Repasar tareas y realizar tareas en casa</li>
     </ul><!-- el ul es para generar una lista sin un orden especifico-->
+</div>
     <a href="#inicio" style="font-size: 25px;">VOLVER AL INICIO </a>
     <hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
     <br>
     <h2 id="tabla">USO DE TABLAS </h2>
-    <p>IMORMACIOND DE CLUBES</p>
+    <p>INFORMACION DE CLUBES</p>
 <table border="2px" style="background-color: azure; font-size: 25px;" >
     <tr><!--el tr es para añadir una fila de la tabla cada vez que se quiere añadir se tiene que abrir un tr-->
         <th>NOMBRE DEL CLUB</th><!--el th se usa solo en los encabezados de la tabla-->
@@ -145,6 +154,70 @@
 <audio src="saim.co.za - 50 Cent - Just A Lil Bit (320 KBps).mp3" controls loop autoplay>AUDIO NO SOPORTADO</audio>
  <hr style="height: 2px; border: dotted black;background-color: antiquewhite;">
 
+<h2>USO DE FORMULARIOS</h2>
+<form action="Todo_sobre_mi_persona.html" method="post"  >
+    <p> <label for="nombre">Nombre: <input type="text" id="nombre" required></label></p>
+    <p> <label for="apellido">Apellido: <input type="text" id="apellido"></label></p>
+    <p> <label for="edad">Edad: <input type="number" id="edad" min="18" max="80"></label></p>
+
+    <p> <label for="observacion">Observacion: 
+           <textarea name="observacion" id="observacion" 
+                      style="height: 180px ; width: 300px ; font-size: 25px;">
+           </textarea>
+        </label>
+    </p>
+    <p>
+        <label for="estatura">Estatura
+            <select name="grupoestatura" id="estatura">
+                <option value="Seleccione">Seleccione</option>
+                <option value="menor de 1.50m">menor de uno 1.50m</option>
+                <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
+                <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
+                <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
+            </select>
+        </label>
+    </p>
+    <p> <label>Cursos Llevados</label>
+        <br>
+        <input type="checkbox" name="cursos" value="matematica" id="matematica">
+           <label for="matematica">Matematica</label> <br>
+        <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"> 
+           <label for="LDSS">LENGUAJE DSS</label> <br>
+        <input type="checkbox" name="cursos" value="Introduccion Investigacion" id="INTRO_INV">
+           <label for="INTRO_INV">Introduccion Investigacion</label> <br>
+        <input type="checkbox" name="cursos" value="Nuevas tedencias" id="Nuevas_Tendencias">
+           <label for="Nuevas_Tendencias">Nuevas Tendencias</label> <br>
+    </p>
+    <p> <label>CICLO ACTUAL</label></p>
+    <input style="scale: 1.5;" id="primero" type="radio" name="ciclo" value="primero">
+    <label for="primero">Primero</label> <br>
+    <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+    <label for="segundo">Segundo</label> <br>
+    <input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
+    <label for="tercero">Tercero</label> <br>
+    <input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
+    <label for="cuarto">Cuarto</label> <br>
+    <input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
+    <label for="quinto">Quinto</label> <br>
+    <input style="scale: 1.5;" id="sexto" type="radio" name="ciclo" value="sexto">
+    <label for="sexto">Sexto</label> <br>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <button type="submit" style="font-size: 25px;">ENVIAR</button>
+</form>
 
 
 
