@@ -1,0 +1,23 @@
+/*Archivo css externo linkrado a index.html*/
+
+h1{
+    color: rgba(202, 32, 32, 0.712);
+    font-size: 50px;
+    background-color: rgb(178, 187, 196);
+    font-family: 'Times New Roman';
+    font-style: italic;
+}
+h2{
+    color: midnightblue;
+    font-size: 25px;
+    background-color: azure;
+    font-family: Georgia;
+    font-style: oblique;
+}
+p{
+    color: brown;
+    font-size: 15px;
+    background-color: aliceblue;
+    font-family:monospace;
+    font-style: italic;
+}
