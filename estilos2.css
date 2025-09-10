@@ -1,0 +1,59 @@
+/* linkeado a la pagina de contenedores html*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+header, nav, main, aside, footer {
+    padding: 20px;
+    margin: 10px;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+}
+nav {
+    background-color: #333;
+    color: white;
+}
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+main {
+    display: flex;   /*flexible para evitar superposicionamiento*/
+}
+section {
+    flex: 2;  /*El atributo flex: 2 es un atajo en CSS que define cómo un elemento se ajusta a un contenedor flexible, 
+    combinando principalmente flex-grow y flex-shrink. En este caso, flex: 2 equivale a flex: 2 1 0, lo que indica que
+     el elemento tiene una proporción de crecimiento de 2, una proporción de contracción de 1 y una base flexible de 0
+     . Esto significa que el elemento crecerá o se encogerá para llenar el espacio disponible, y el valor "2" le da el 
+     doble de capacidad de crecer en comparación con otros elementos con un flex-grow menor en el mismo contenedor.*/
+    background-color: #b92b2b;
+    padding: 10px;
+}
+aside {
+    flex: 1;
+    background-color: #99a7d6;
+    padding: 10px;
+    max-width: 100px;
+    height: 270px;
+}
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+article {
+    background-color: #d1dfa1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+}
+.margen_imagen{
+    margin-right: 20px;
+}

@@ -15,9 +15,24 @@ h2{
     font-style: oblique;
 }
 p{
-    color: brown;
+    color:mediumblue ;
     font-size: 15px;
-    background-color: aliceblue;
     font-family:monospace;
     font-style: italic;
+}
+div{
+    color:red ;
+    background-color: bisque;
+}
+div p{          /*estilo solo para cualquier parrafo dentro de algun div,*/
+    font-size: 30px;
+    color: darkblue;
+}
+p label{
+    font-size: 25px;
+    font-family: Georgia;
+}
+p label input{
+    font-size: 30px;
+    font-family:Georgia;
 }
