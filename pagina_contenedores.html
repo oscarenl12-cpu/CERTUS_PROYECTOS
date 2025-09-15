@@ -6,7 +6,7 @@
     <title>TIENDA VIRTUAL CALZADOS</title>
     <link rel="stylesheet" type="text/css" href="estilos2.css"/>
 </head>
-<body>
+<body >
 
     <div class="contenedor">
         <header>
@@ -24,7 +24,11 @@
 
         <main>
             
-            <section>
+            <section   style="background-image: url('ESCUDOS/Escudo_Alianza_Lima..png') ; 
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 800px;
+            background-position: 450px;">
                 <article>
                     <h2>ZAPATILLAS</h2>
                     <p>CATÁLOGO :</p>
@@ -72,7 +76,8 @@
                     <h2>ZAPATOS</h2>
                     <p>CATÁLOGO:</p>
                         <p>ZAPATOS GUCCI</p>
-                        <p>La historia de Gucci comienza en 1921 con la apertura de la primera tienda de equipaje por 
+                        
+                        <p class="gucci_historia">La historia de Gucci comienza en 1921 con la apertura de la primera tienda de equipaje por 
                            Guccio Gucci en Florencia, Italia. Inspirado en la elegancia inglesa que observó trabajando 
                            en el hotel Savoy de Londres, Gucci fusionó la artesanía toscana con un diseño sofisticado, 
                            dando origen a una marca sinónimo de lujo. A lo largo de los años, Gucci ha introducido 
@@ -85,24 +90,72 @@
 
                 </article>
             </section>
-            
+        <div>
             <aside>
                 <h3>NUESTRAS MARCAS</h3>
-                <p><a href="https://www.nike.com.pe/" target="_blank">NIKE</a></p>
-                <p><a href="https://es.louisvuitton.com/esp-es/hombre/zapatos/zapatillas/_/N-t1fud07g" target="_blank">LOUIS VUITTON</a></p>
-                <p><a href="https://pe.puma.com/pe" target="_blank">PUMA</a></p>
-                <p><a href="https://www.adidas.pe/" target="_blank">ADIDAS</a></p>
-                <p><a href="https://www.gucci.com/es/es/ca/men/shoes-for-men-c-men-shoes?" target="_blank">GUCCI</a></p>
-                      <br>
-                <div class="contenedor-flex"> 
-                <img src="zapatillas/medias.jpg" width="120px" height="200px" alt="IMAGEN NO CARGA">
-                </div>
-                <br>
-                <div class="contenedor-flex"> 
-                <img src="zapatillas/medias_2.jpg" width="120px" height="200px" alt="IMAGEN NO CARGA">
-                </div> 
+                <p><a class="color_link" href="https://www.nike.com.pe/" target="_blank">NIKE</a></p>
+                <p><a class="color_link" href="https://es.louisvuitton.com/esp-es/hombre/zapatos/zapatillas/_/N-t1fud07g" target="_blank">LOUIS VUITTON</a></p>
+                <p><a class="color_link" href="https://pe.puma.com/pe" target="_blank">PUMA</a></p>
+                <p><a class="color_link" href="https://www.adidas.pe/" target="_blank">ADIDAS</a></p>
+                <p><a class="color_link" href="https://www.gucci.com/es/es/ca/men/shoes-for-men-c-men-shoes?" target="_blank">GUCCI</a></p>
             </aside>
-        </main>
+            <br><br>
+            <aside class="aside_imagenes">
+                <h3 class="primera_letra">Otros productos</h3>
+                <img src="zapatillas/medias.jpg" alt="IMAGEN NO CARGA" height="150px" width="150px">
+            </aside>
+        </div>
+    </main>
+    <section>
+          
+        <article> <h2>POSICIONAMIENTO</h2>
+            <br>
+            <h2>POSICIONAMIENTO STATIC 1 (con margin-top)</h2>
+            <div style="display: inline-block;">
+                <p class="clase_static">
+                    TEXTO CON STATIC
+                </p>
+            </div>
+            <div style="display: inline-block;">
+                <p>
+                    TEXTO EN LA MISMA LINEA
+                </p>
+            </div>
+            <h2>POSICIONAMIENTO STATIC 2 (sin margin-top)</h2>
+            <div style="display: inline-block;">
+                <p class="clase_static_2">
+                    TEXTO CON STATIC                  
+                </p>
+            </div>
+            <div style="display: inline-block;">
+                <p style="background-color: orange;">
+                    TEXTO EN LA MISMA LINEA
+                </p>
+            </div>
+
+        <h2>POSICIONAMIENTO RELATIVE</h2>
+        <div style="display: inline-block;">
+            <p class="clase_relative">
+                TEXTO CON POSICIONAMIENTO RELATIVE EN UN BLOQUE INLINE_ _ _ _ _ _ _ _ _ _ _ 
+            </p>
+            <img class="clase_relative"
+             style="border: 9px dotted; color: rgb(4, 82, 27) ;" 
+             src="ESCUDOS/Escudo_Real_Madrid.png" 
+             alt="IMAGEN NO CARGA"
+             width="400px"
+             height="341px">
+        </div>
+        <div style="display: inline-block;">
+            <p>
+                2do TEXTO EN LA MISMA LINEA
+            </p>
+        </div>
+
+        </article>
+    </section>
+            
+             
+    
 
         <footer>
             <p>Derechos reservados &copy; 2025 - SHOES STORE</p>

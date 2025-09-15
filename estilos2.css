@@ -36,8 +36,9 @@ aside {
     flex: 0;
     background-color: #99a7d6;
     padding: 10px;
-    max-width: 100px;
+    max-width: 150px;
     height: 270px; 
+    flex-direction: column;
 }
 footer {
     background-color: #222;
@@ -57,8 +58,53 @@ article {
 .margen_imagen{
     margin-right: 20px;
 }
-.contenedor-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.aside_imagenes{
+    background-color: white;
+    height: 270px;
+    width: 150px;
+}
+.color_link {
+    color: rgb(17, 5, 129);
+}
+.color_link:hover {
+    color: rgb(230, 230, 8);
+    font-family:Georgia;
+}
+.primera_letra {
+    color: darkslateblue;
+}
+.primera_letra::first-letter{
+    color: rgb(3, 82, 9);
+    font-size: 150%;
+}
+.gucci_historia::selection {
+    color: brown;
+    background-color: yellow;
+}
+.clase_static {
+    font-size: 20px;
+    background-color: aqua;
+    position: static;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 200px;
+}
+.clase_static_2 {
+    font-size: 20px;
+    background-color: aqua;
+    position: static;
+    top: 20px;
+    left: 80px;
+    right: 200px;
+}
+.clase_relative{
+    font-size: 20px;
+    background-color: rgb(62, 100, 226);
+    height: 250px;
+    width: 200px;
+}
+.clase_relative:hover{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 100px;
 }
