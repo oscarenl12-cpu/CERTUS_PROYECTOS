@@ -20,6 +20,22 @@
             <a href="#">Productos</a>
             <a href="#">Formulario de registro cliente</a>
             <a href="#">Contactanos</a>
+            <ul class="clasenav">
+                <li> <a href="https://newbalance.com.pe/">Nex Balance</a>
+                    <ul>
+                        <li> <a class="clasenav" href="https://newbalance.com.pe/hombre">Hombre</a></li>
+                        <li> <a class="clasenav" href="https://newbalance.com.pe/mujer">Mujer</a></li>
+                        <li> <a class="clasenav" href="https://newbalance.com.pe/ninos">Niños</a></li>
+                    </ul>
+                </li>
+                <li> <a href="https://www.balenciaga.com/es">Balenciaga</a>
+                    <ul>
+                        <li> <a class="clasenav" href="https://www.balenciaga.com/es-es/hombre/zapatos/zapatillas">Hombre</a></li>
+                        <li> <a class="clasenav" href="https://www.balenciaga.com/es-es/mujer/zapatos/zapatillas">Mujer</a></li>
+                        <li> <a class="clasenav" href="https://www.balenciaga.com/es-es/mujer/zapatos/kids-shoes">Niños</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
         <main>
@@ -300,6 +316,35 @@
          </div>
         </article>
     </section>
+    <section>
+        <article> <h2>JAVASCRIPT</h2>
+            <div style="font-size: 30px;">Contenedor resultado en javascript
+               <div id="resultado" style="font-size: 30px;">
+                    <p>OPERACIONES</p>
+               </div>
+            </div>  
+            <script>
+                window.alert("BIENVENIDOS")
+                var valor1=30 ; var valor2=70 ;
+                var suma = valor1 + valor2 ; var resta = valor1 - valor2 ;
+                var producto = valor1 * valor2 ;
+                document.write("<br> <br><br> FIN DE PAGINA");
+
+                console.log("El valor de la suma de " ,valor1, " con ", valor2," es: " ,suma) ;
+                console.log("El valor de la resta de " ,valor1, " con ", valor2," es: " ,resta) ;
+                console.log("El valor de la multiplicación de " ,valor1, " con ", valor2," es: " ,producto) ;
+                document.getElementById('resultado').innerHTML=
+                "<br>El valor de la suma de "+valor1+ " con "+valor2+" es: "+suma+ "<br>"
+                +"El valor de la resta de "+valor1+ " con "+valor2+" es: "+resta+ "<br>"
+                +"El valor de la multiplicación de "+valor1+ " con "+valor2+" es: "+producto;
+            </script>
+
+        </article>
+    </section>
+    <video autoplay muted loop id="Mivideo">
+        <source src="VideoCorto.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
             
              
     
