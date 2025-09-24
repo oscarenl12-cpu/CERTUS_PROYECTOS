@@ -285,3 +285,7 @@ article {
 .clasenav li:hover > ul {
     display: block;
 }
+#ejmDOM1{
+    color: #da981e;
+    font-weight: bold;
+}

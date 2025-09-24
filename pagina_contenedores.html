@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIENDA VIRTUAL CALZADOS</title>
-    <link rel="stylesheet" type="text/css" href="estilos2.css"/>
+    <link rel="stylesheet" type="text/css" href="estilos2.css"/><!--linkeado a css-->
+    <script type="text/javascript" src="SCRIPT1.js"></script> <!--linkeado a java script-->
+
 </head>
 <body >
 
@@ -295,7 +297,7 @@
 
         <h2>USO DE DISPLEY FLEX</h2>
             <div class="tipoflex">
-               <div style="background-color: beige;">Elemento 1 de flex</div>
+               <div style="background-color: darkcyan;">Elemento 1 de flex</div>
                <div style="background-color: rgb(196, 144, 41);">Elemento 2 de flex</div>
                <img src="cr7.jpg" alt="IMAGEN NO CARGA" height="200px" width="200px">
                <div style="background-color: rgb(134, 134, 20);">Elemento 3 de flex</div>
@@ -337,9 +339,39 @@
                 "<br>El valor de la suma de "+valor1+ " con "+valor2+" es: "+suma+ "<br>"
                 +"El valor de la resta de "+valor1+ " con "+valor2+" es: "+resta+ "<br>"
                 +"El valor de la multiplicación de "+valor1+ " con "+valor2+" es: "+producto;
+                document.write("<ul align='left'>"+
+                   "<li>uso de document.write</li>" +
+                   "<li>El document.write es una nfuncion desactualizada</li>" +
+                   "<li>Es mejor ponerlo dentro del html para que pueda funcionar</li>" +
+                   "</ul>") ;
             </script>
 
-        </article>
+            <h1 style="font-size: 50px;">EJEMPLO DE MANIPULACION DEL DOM</h1>
+                 <p id="ejmDOM1" style="font-size: 25px;">Este es el primer texto a aplicar DOM</p>
+
+                 <button onclick="FCambioColor()">CAMBIA COLOR</button>
+            <!--Manipulacion del DOM-->
+            <h1 style="font-size: 50px;">EJEMPLO DE MANIPULACION DEL DOM</h1>
+                <p id="ejmDOM1" style="font-size: 25px;">Este es el primer texto a aplicar DOM</p>
+
+                <p class="classDOM1" style="font-size: 25px;">Texto 1 a aplicar DOM mediante clase</p>
+                <p class="classDOM1" style="font-size: 25px;">Texto 2 a aplicar DOM mediante clase</p>
+                <h2 class="classDOM1" style="font-size: 25px;">Texto 3 a aplicar DOM mediante TAG</h2>
+
+                <button onclick="FCambioColor()">CAMBIAR COLOR POR ID</button>
+
+                <button onclick="FCambioClase1()">CAMBIAR POR CLASE</button>
+                <button onclick="FCambioTag1()">CAMBIAR POR TAG h2</button>
+                <button onclick="FCrear1()">Crear lista viñetas</button>
+                <button onclick="FAgregarTextoPermanente()">Agregar texto a vTexto1</button>
+                <h2>CREACIÓN DE ELEMENTOS EN LINEA</h2>
+                <br>
+                <button onclick="FCrearElemento">Crear Elemento</button>
+                <div id="complementario1">Datos complementarios del estudiante: <br>
+
+                </div>   
+
+        </article >
     </section>
     <video autoplay muted loop id="Mivideo">
         <source src="VideoCorto.mp4" type="video/mp4">
