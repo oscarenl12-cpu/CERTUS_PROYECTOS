@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+main , article {
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+main {
+    display: flex;
+}
+article {
+    background-color: #d6d9ca;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e47272;
+    height: 300px;
+    width: 300px;
+}
+.clase_static {
+    font-size: 20px;
+    background-color: rgb(170, 200, 200);
+    position: static;
+}
+

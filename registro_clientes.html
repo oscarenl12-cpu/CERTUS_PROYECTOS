@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos3.css"/><!--linkeado a css-->
+    <a href="pagina_principal.html" target="_blank"></a>&emsp;
+    <title>REGISTRO</title>
+
+</head>
+<body>
+    
+   <main>
+   <article>
+            <div style="display: inline-block;">
+                <p class="clase_static">
+                    Registrate en este sitio
+                </p>
+            </div>
+         <br><br>
+        <label for="usuario">Nombre de Usuario:
+            <input type="text" id="usuario" name="usuario" minlength="5" maxlength="40" pattern="[A-Za-z0_9]+" required>
+        </label>
+        <br><br>
+        <label for="clave"> Contraseña:
+            <input type="password" id="clave" name="clave" minlength="8" maxlength="10" placeholder="min 8 ; max 10">
+        </label>
+          <h6>Recibiras confirmación del registro por correo electrónico </h6>
+        <button submit="pagina_principal.html">Registrarse</button>
+    </article>
+</main>
+</body>
+</html>
