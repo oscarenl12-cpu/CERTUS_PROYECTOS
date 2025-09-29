@@ -1,26 +1,74 @@
+/*estilos CSS para el formulario de regsitro*/
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
 }
-main , article {
-    padding: 20px;
-    margin: auto;
-    max-width: 1200px;
+
+.registro-container {
+      width: 300px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
-main {
-    display: flex;
+
+.registro-header {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+      color: #0073aa;
 }
-article {
-    background-color: #d6d9ca;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #e47272;
-    height: 300px;
-    width: 300px;
+
+.registro-body {
+      padding: 20px;
 }
-.clase_static {
-    font-size: 20px;
-    background-color: rgb(170, 200, 200);
-    position: static;
+
+.registro-body label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: black;
+}
+
+.registro-body input[type="text"],
+.registro-body input[type="password"] {
+      width: 240px;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border-color 0.3s;
+}
+
+.registro-body input[type="text"]:focus,
+.registro-body input[type="password"]:focus {
+      border-color: #0073aa;
+}
+
+.registro-body p {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 15px;
+}
+
+.registro-body button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0073aa;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+}
+
+.registro-body button:hover {
+      background-color: #005f87;
 }
 
