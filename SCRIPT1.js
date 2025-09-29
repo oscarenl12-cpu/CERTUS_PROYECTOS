@@ -57,9 +57,11 @@ function FCrearElemento() {
     var texto=document.createTextNode("Deporte favorito:");
     nuevoH3.appendChild(texto);
     vElemento.appendChild(nuevoH3);
-
+      //crear un input text para poder completar el deporte favorito
     var nuevoInputText= document.createElement("input");
     nuevoInputText.type = "text";
-    vElemento.appendChild(nuevoInputText);
 
+    vElemento.appendChild(nuevoInputText)   
+    // CREAR un parrafo de tamaño 20px que pida ingresar tu dni
+    //CREAR un input number correspondiente
 }
