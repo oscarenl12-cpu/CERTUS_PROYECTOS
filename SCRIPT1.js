@@ -63,7 +63,7 @@ function FCrearElemento() {
 
     vElemento.appendChild(nuevoInputText);
     // CREAR un parrafo de tamaño 20px que pida ingresar tu dni
-    //CREAR un input number correspondiente
+    //CREAR un input number correspondientes
 
     var nuevoP= document.createElement ("p");
     var texto=document.createTextNode("Ingrese su numero de DNI :");
