@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIENDA VIRTUAL CAMISAS</title>
     <link rel="stylesheet" type="text/css" href="estilos4.css"/>
+    <script type="text/javascript" src="SCRIPT2.js"></script>
 </head>
 <body>
     <div>
@@ -31,48 +32,101 @@
           <article>
             <h2>Camisas Urban Style</h2>
             <table border="2px">
-    <tr><!--el tr es para añadir una fila de la tabla cada vez que se quiere añadir se tiene que abrir un tr-->
-        <th>IMAGEN REFERENCIAL</th><!--el th se usa solo en los encabezados de la tabla-->
-        <th>DETALLES</th>
-        <th>TALLAS</th>
-        <th>PRECIO</th>
-    </tr>
-    <tr>
-        <td><img src="camisas/08a2900a-b5f5-42d5-87a8-d4d7da68c261.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
-        <td>Camisa negra manga corta</td>
-        <td>XL ; L ; M ; S</td>
-        <td>s/ 50.00</td>
-    </tr>
-    <tr>
-        <td><img src="camisas/14f58371-679a-4688-b6e2-c82b18fc0d2e.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
-        <td>Camisa azul manga corta</td>
-        <td>XL ; L ; M ; S</td>
-        <td>s/ 50.00</td>
-    </tr>
-    <tr>
-        <td><img src="camisas/48779019eae16dfa7b7925458217f66a.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
-        <td>Camisa blanca manga larga</td>
-        <td>XL ; L ; M ; S</td>
-        <td>s/ 60.00</td>
-    </tr>
-    <tr>
-        <td><img src="camisas/br557686_br01_4_3.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
-        <td>Camisa blanca manga corta</td>
-        <td>XL ; L ; M ; S</td>
-        <td>s/ 45.00</td>
-    </tr>
-    <tr>
-        <td><img src="camisas/D_NQ_NP_716463-MPE71022060252_082023-O-camisa-manga-larga-clasica-color-entero-algodon.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
-        <td>Camisa negra manga larga</td>
-        <td>XL ; L ; M ; S</td>
-        <td>s/ 55.00</td>
-    </tr>
-</table>
-
-         </div>
+                <tr>
+                    <th>IMAGEN REFERENCIAL</th>
+                    <th>DETALLES</th>
+                    <th>TALLAS</th>
+                    <th>PRECIO</th>
+                    <th>COMPRAR</th>
+                </tr>
+                <tr>
+                    <td><img src="camisas/08a2900a-b5f5-42d5-87a8-d4d7da68c261.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
+                    <td>Camisa negra manga corta</td>
+                    <td>XL ; L ; M ; S</td>
+                    <td>s/ 50.00</td>
+                    <td class="producto"><button onclick="agregarAlCarrito('Camisa negra manga corta', 50.00)">Añadir al carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="camisas/14f58371-679a-4688-b6e2-c82b18fc0d2e.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
+                    <td>Camisa azul manga corta</td>
+                    <td>XL ; L ; M ; S</td>
+                    <td>s/ 50.00</td>
+                    <td class="producto"><button onclick="agregarAlCarrito('Camisa azul manga corta', 50.00)">Añadir al carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="camisas/48779019eae16dfa7b7925458217f66a.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
+                    <td>Camisa blanca manga larga</td>
+                    <td>XL ; L ; M ; S</td>
+                    <td>s/ 60.00</td>
+                    <td class="producto"><button onclick="agregarAlCarrito('Camisa blanca manga larga', 60.00)">Añadir al carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="camisas/br557686_br01_4_3.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
+                    <td>Camisa blanca manga corta</td>
+                    <td>XL ; L ; M ; S</td>
+                    <td>s/ 45.00</td>
+                    <td class="producto"><button onclick="agregarAlCarrito('Camisa blanca manga corta', 45.00)">Añadir al carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="camisas/D_NQ_NP_716463-MPE71022060252_082023-O-camisa-manga-larga-clasica-color-entero-algodon.webp" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
+                    <td>Camisa negra manga larga</td>
+                    <td>XL ; L ; M ; S</td>
+                    <td>s/ 55.00</td>
+                    <td class="producto"><button onclick="agregarAlCarrito('Camisa negra manga larga', 55.00)">Añadir al carrito</button></td>
+                </tr>
+            </table>
+                    <div id="carrito">
+                        <h2>🛒 Carrito</h2>
+                        <ul id="lista-carrito"></ul>
+                        <p><strong>Total: $<span id="total">0</span></strong></p>
+                    </div>
 
           </article>
+        </section>
+        <section>
+            <article>
+              <div class="form-container">
+              <h2>Formulario de Pedido</h2>
+              <form>
+                   <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección de entrega</label>
+                    <textarea id="direccion" name="direccion" placeholder="Escribe tu dirección completa" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="producto">Producto</label>
+                    <select id="producto" name="producto" required>
+                      <option value="">Selecciona un producto</option>
+                      <option value="camisa">Camisa</option>
+                      <option value="pantalon">Pantalón</option>
+                      <option value="zapatos">Zapatos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+                      <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 987654321" required>
+                </div>
+
+                    <button type="submit" class="btn-submit">Enviar Pedido</button>
+              </form>
+              </div>
+            </article>
         </section>
         <footer>
             <p>Derechos reservados &copy; 2025 - URBAN STYLE</p>
