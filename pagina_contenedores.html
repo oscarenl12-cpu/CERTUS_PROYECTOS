@@ -386,6 +386,91 @@
                 <button style="font-size: 25px;" onclick="FEliminarConcat()">
                     Eliminar concatenación</button>
         </article >
+        <article>
+            <h2>USO DE JAVA SCRIPT EN FORMULARIOS</h2>
+                    <form action="Todo_sobre_mi_persona.html" method="post"  >
+                        <p> <label for="nombre">Nombre: <input type="text" id="nombre" name="nombre" required autofocus class="datosPersonales"></label></p>
+                        <p> <label for="apellido">Apellido: <input type="text" id="apellido" name="apellido" class="datosPersonales"></label></p>
+                        <p> <label for="edad">Edad: <input type="number" id="edad" name="edad" min="18" max="80" required class="datosPersonales"></label></p>
+
+                        <p> <label for="observacion">Observacion: <br> 
+                                <textarea name="observacion" id="observacion" 
+                                        style="height: 180px ; width: 300px ; font-size: 25px;">
+                                </textarea>
+                            </label>
+                        </p>
+                        <p><!--combobox selec-->
+                            <label for="estatura">Estatura
+                                <select name="grupoestatura" id="estatura">
+                                    <option value="Seleccione">Seleccione</option>
+                                    <option value="menor de 1.50m">menor de uno 1.50m</option>
+                                    <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
+                                    <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
+                                    <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
+                                </select>
+                            </label>
+                        </p>
+                        <p> <label>Cursos Llevados</label>
+                            <br><!--check box-->
+                            <input type="checkbox" name="cursos" value="matematica" id="matematica">
+                            <label for="matematica">Matematica</label> <br>
+                            <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"> 
+                            <label for="LDSS">LENGUAJE DSS</label> <br>
+                            <input type="checkbox" name="cursos" value="Introduccion Investigacion" id="INTRO_INV">
+                            <label for="INTRO_INV">Introduccion Investigacion</label> <br>
+                            <input type="checkbox" name="cursos" value="Nuevas tedencias" id="Nuevas_Tendencias">
+                            <label for="Nuevas_Tendencias">Nuevas Tendencias</label> <br>
+                            <input type="checkbox" name="cursos" value="Comunicacion y gestion de la IA" id="comunicacion_y_G_de_la_IA">
+                            <label for="comunicacion_y_G_de_la_IA">Comunicacion y gestion de la IA</label> <br>
+                        </p><!--radio button-->
+                        <p> <label>CICLO ACTUAL</label></p>
+                        <input style="scale: 1.5;" id="primero" type="radio" name="ciclo" value="primero">
+                        <label for="primero">Primero</label> <br>
+                        <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+                        <label for="segundo">Segundo</label> <br>
+                        <input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
+                        <label for="tercero">Tercero</label> <br>
+                        <input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
+                        <label for="cuarto">Cuarto</label> <br>
+                        <input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
+                        <label for="quinto">Quinto</label> <br>
+                        <input style="scale: 1.5;" id="sexto" type="radio" name="ciclo" value="sexto">
+                        <label for="sexto">Sexto</label> <br>
+                        <br>    
+                        <label for="fecha">SELECCIONE FECHA:
+                            <input style="font-size: 20px;" type="date" name="fecha" id="fecha" min="2025-09-01" max="2025-12-31">
+                        </label>
+
+                            <br><br>
+
+                        <label for="correo">Correo Electronico:
+                            <input type="email" id="correo" name="email" placeholder="example@certus.edu.pe"
+                            pattern="[A-Za-z0_9].+@certus\.edu\.pe">
+                        </label>
+
+                        <br><br>
+
+                        <label for="clave"> Contraseña:
+                            <input type="password" id="clave" name="clave" minlength="8" maxlength="10" placeholder="min 8 ; max 10">
+                        </label>
+
+                        <br><br>
+                        <p>
+                            <label for="usuario">Nombre de Usuario
+                                <input type="text" id="usuario" name="usuario" minlength="5" maxlength="40" pattern="[A-Za-z0_9]+" required>
+                            </label>
+                        </p>
+                            <br><br>
+                        <label for="resetear">RESETEAR:
+                            <input type="reset" id="resetear" name="resetear">
+                        </label>
+                        <br><br>
+                        <button style="font-size: 20px;" type="button" 
+                        onclick="FCapturarNombre()">Copiar datos a observaciones</button>
+                        <br><br>
+                        <button type="submit" style="font-size: 20px;">ENVIAR</button>
+                    </form>   
+        </article>
     </section>
     <video autoplay muted loop id="Mivideo">
         <source src="VideoCorto.mp4" type="video/mp4">

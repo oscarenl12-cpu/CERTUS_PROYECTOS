@@ -115,5 +115,55 @@ function FUsoForEach1(){
 }            //fin de fuction
 function FEliminarConcat(){
     const vTextoClass = document.getElementsByClassName("classFOR1");
-        vTextoClass [3].remove();     //eliminar la clase de posición [3]
+    let rpta = prompt("ESTAS SEGURO DE ELIMINAR EL TEXTO CONCATENADO?(S/N)",'');
+    if (rpta =="S"|| rpta=="s") //doble || signiifca o
+        { let rpta2=prompt("INGRESE EL NUMERO DE FILA A ELIMINAR", '');
+            if (rpta2>= 0 && rpta2<vTextoClass.length) // doble && significa y
+            {
+                vTextoClass[rpta2].remove(); //eliminar la class de posicion rpta2
+          alert("CONCATENACION ELIMINADA");
+            }
+          else
+          {
+            alert("NUMERO DE FILA INCORRECTO")
+          }
+        }
+      else
+            { if (rpta == "N" || rpta=="n")
+            { alert("NO SE ELIMINARA");
+            }
+           else 
+            { alert("OPCION INCORRECTA-ingresa nuevamente");
+            }
+        }
+}
+function FCapturarNombre() {
+    const vTexto1 = document.getElementById ("nombre");
+    const vTexto2 = document.querySelectorAll ("input.datosPersonales");
+    const vTexto3 = document.getElementById("clave");
+    const vTexto4 = document.getElementById("apellido");
+    const vTexto5 = document.getElementById("usuario");
+
+      //usar input para clases relacionadas a cajas de texto, etc
+      vTexto1.style.color="red";
+
+      var valor1 = vTexto1.value; //value obtiene el contenido de la caja de texto nombre
+      var valor2 = ""; //tipo string
+      vTexto3.value=valor1; //asigna el nombre a la clave
+
+      vTexto4.style.color="red"
+      var valor4 = vTexto4.value;
+      var valor5 = "";
+      vTexto5.value=valor4;
+
+      //foreach recorre todo el contenido del array de la clase datosPersonales
+        vTexto2.forEach(input=>{
+        valor2=valor2 + `${input.name}: ${input.value} : ${input.id} \n `; //alt + 96
+        input.style.border="2px solid orange";
+        //para comillas tipo texto permiten colocar variables del from y convertilas a texto mediante $
+        });
+
+        vTexto2[1].style.backgroundColor="green";
+      document.getElementById('observacion').value = valor2;
+      console.log('El valor del nombre es:', valor1);
 }
