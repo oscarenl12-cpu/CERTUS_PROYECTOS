@@ -42,35 +42,35 @@
                 <tr>
                     <td><img src="camisas/camisa_blanca_manga_corta.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
                     <td>Camisa negra manga corta</td>
-                    <td>XL ; L ; M ; S</td>
+                    <td>L</td>
                     <td>s/ 50.00</td>
                     <td class="producto"><button onclick="agregarAlCarrito('Camisa negra manga corta', 50.00)">Añadir al carrito</button></td>
                 </tr>
                 <tr>
                     <td><img src="camisas/camisa_azul_manga_corta.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
                     <td>Camisa azul manga corta</td>
-                    <td>XL ; L ; M ; S</td>
+                    <td>L</td>
                     <td>s/ 50.00</td>
                     <td class="producto"><button onclick="agregarAlCarrito('Camisa azul manga corta', 50.00)">Añadir al carrito</button></td>
                 </tr>
                 <tr>
                     <td><img src="camisas/camisa_blanca_manga_larga.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
                     <td>Camisa blanca manga larga</td>
-                    <td>XL ; L ; M ; S</td>
+                    <td>L</td>
                     <td>s/ 60.00</td>
                     <td class="producto"><button onclick="agregarAlCarrito('Camisa blanca manga larga', 60.00)">Añadir al carrito</button></td>
                 </tr>
                 <tr>
                     <td><img src="camisas/camisa_blanca_manga_corta.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
                     <td>Camisa blanca manga corta</td>
-                    <td>XL ; L ; M ; S</td>
+                    <td>L</td>
                     <td>s/ 45.00</td>
                     <td class="producto"><button onclick="agregarAlCarrito('Camisa blanca manga corta', 45.00)">Añadir al carrito</button></td>
                 </tr>
                 <tr>
                     <td><img src="camisas/camisa_negra_manga_larga.jpg" alt="IMAGEN NO CARGA CAMBIA TU WIFI" width="100px" height="100px"></td>
                     <td>Camisa negra manga larga</td>
-                    <td>XL ; L ; M ; S</td>
+                    <td>L</td>
                     <td>s/ 55.00</td>
                     <td class="producto"><button onclick="agregarAlCarrito('Camisa negra manga larga', 55.00)">Añadir al carrito</button></td>
                 </tr>
@@ -78,7 +78,8 @@
                     <div id="carrito">
                         <h2>🛒 Carrito</h2>
                         <ul id="lista-carrito"></ul>
-                        <p><strong>Total: $<span id="total">0</span></strong></p>
+                        <p><strong>Total: s/<span id="total">0</span></strong></p>
+                        <button class="btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
                     </div>
 
           </article>
@@ -88,41 +89,81 @@
               <div class="form-container">
               <h2>Formulario de Pedido</h2>
               <form>
-                   <div class="form-group">
+                <div class="form-group">
                     <label for="nombre">Nombre completo</label>
-                      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="direccion">Dirección de entrega</label>
                     <textarea id="direccion" name="direccion" placeholder="Escribe tu dirección completa" required></textarea>
                 </div>
-
                 <div class="form-group">
-                    <label for="producto">Producto</label>
-                    <select id="producto" name="producto" required>
-                      <option value="">Selecciona un producto</option>
-                      <option value="camisa">Camisa</option>
-                      <option value="pantalon">Pantalón</option>
-                      <option value="zapatos">Zapatos</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="cantidad">Cantidad</label>
-                      <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+                    <label for="detalle">Detalle del pedido</label>
+                    <textarea id="detalle" readonly></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 987654321" required>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 987654321" required>
+                </div>
+                <div class="payment-box">
+                <h3>Metodo de pago</h3>
+
+                <div class="option1">
+                    <input type="radio" id="visa" name="payment" value="visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <label for="visa">Visa</label>
                 </div>
 
+                <div class="option1">
+                    <input type="radio" id="yape" name="payment" value="yape">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Icono_de_la_aplicaci%C3%B3n_Yape.png" alt="yape">
+                    <label for="yape"><b>Yape</b></label>
+                </div>
+
+                <div class="option1">
+                    <input type="radio" id="plin" name="payment" value="plin">
+                    <img src="https://images.seeklogo.com/logo-png/38/1/plin-logo-png_seeklogo-386806.png" alt="plin">
+                    <label for="plin">Plin</label>
+                </div>
+
+                <div class="option1">
+                    <input type="radio" id="bcp" name="payment" value="bcp">
+                    <img src="https://i.pinimg.com/1200x/b3/08/3b/b3083be0d3f3a188bb9697e5fcbccfeb.jpg" alt="bcp">
+                    <label for="bcp">BCP</label>
+                </div>              
+                </div>
+                <br>
+                <div class="contact-box">
+                    <h3>Preferencias de contacto</h3>
+
+                    <div class="option">
+                    <input type="checkbox" id="correo" name="contacto" value="correo">
+                    <label for="correo">Recibir correo</label>
+                    </div>
+
+                    <div class="option">
+                    <input type="checkbox" id="sms" name="contacto" value="sms">
+                    <label for="sms">Recibir SMS</label>
+                    </div>
+
+                    <div class="option">
+                    <input type="checkbox" id="llamadas" name="contacto" value="llamadas">
+                    <label for="llamadas">Recibir llamadas</label>
+                    </div>
+
+                    <div class="option">
+                    <input type="checkbox" id="whatsapp" name="contacto" value="whatsapp">
+                    <label for="whatsapp">Recibir mensajes por WhatsApp</label>
+                    </div>
+                </div>
+                <br>
                     <button type="submit" class="btn-submit">Enviar Pedido</button>
               </form>
               </div>

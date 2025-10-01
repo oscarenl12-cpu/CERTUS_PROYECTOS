@@ -38,11 +38,22 @@
       carrito.forEach(item => {
         let li = document.createElement("li");
         li.innerHTML = `
-          ${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad}
+          ${item.nombre} x${item.cantidad} - s/${item.precio * item.cantidad}
           <button class="btn-eliminar" onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button>
         `;
         lista.appendChild(li);
       });
 
       totalElemento.textContent = total;
+    }
+    function finalizarPedido() {
+      const detalle = document.getElementById("detalle");
+      let texto = "Pedido:\n";
+       carrito.forEach(item => {
+        texto += `- ${item.nombre} x${item.cantidad} = s/${item.precio * item.cantidad}\n`;
+      });
+
+      texto += `\nTotal: s/${total}`;
+
+      detalle.value = texto;
     }
