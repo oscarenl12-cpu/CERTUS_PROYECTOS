@@ -167,3 +167,68 @@ function FCapturarNombre() {
       document.getElementById('observacion').value = valor2;
       console.log('El valor del nombre es:', valor1);
 }
+function FValidarCiclo() 
+{
+  //var ciclo = document.getElementById("Segundo");
+  const varciclo = document.getElementsByName("ciclo");
+
+  for (let i = 0; 1 < varciclo.length; i++){
+    if (varciclo[i].checked==true) {
+      //alert("seleccionaste: + varciclo[i].value);
+      document.getElementById('observacion').value = varciclo[i].value;
+      return; // detener el bucle una vez que se encuentre seleccionado
+    }
+  }
+}
+function FValidarCurso() 
+{
+  const varcursos = document.getElementsByName("cursos");
+  let seleccionados = [];
+
+  for (let i = 0; 1 < varcursos.length; i++){
+    if (varcursos[i].checked==true) {
+      seleccionados.push(varcursos[i].value)
+      document.getElementById('observacion').value = seleccionados.join(", ");
+    }
+  }
+}
+ ///////////////////////////////////////////////////////////
+ // JAVA SCRIPT MANEJO DE EVENTOS SIN BOTONES
+
+ document.addEventListener("DOMContentLoaded", ()=>{
+      // funcionalidad para radio button
+  const radios = document.querySelectorAll('input[name="ciclo"]');
+
+radios.forEach(function(radio){
+  radio.addEventListener('change',function(event){
+    console.log("ciclo seleccionado:", event.target.value);
+    const cantidad = event.target.value;
+    document.getElementById('observacion').value = cantidad
+  }); //fin de radio button addEventListener change
+
+}); // fin de radio for each
+// funcionalidad para radio button
+ const checkboxes = document.querySelectorAll('input[name="cursos"]');
+ const seleccionados = [];
+
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function(event) {
+    console.log("Cursos seleccionados:", seleccionados);
+    const valor = event.target.value;
+    document.getElementById('observacion').value = seleccionados.join(", ")
+
+    if (event.target.checked) {
+      // si se marca, lo añadimos al arreglo
+      seleccionados.push(valor);
+    } else {
+      // si se desmarca, lo quitamos del arreglo
+      const index = seleccionados.indexOf(valor);
+      if (index > -1) {
+        seleccionados.splice(index, 1);
+      }
+     }
+  });//fin del checkbox addEventListener change
+});// fin de chechkbox for each
+
+ });// fin de DOMContentLoaded
+ 
