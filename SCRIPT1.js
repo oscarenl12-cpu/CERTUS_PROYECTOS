@@ -231,4 +231,31 @@ checkboxes.forEach(function(checkbox) {
 });// fin de chechkbox for each
 
  });// fin de DOMContentLoaded
- 
+ ////tarea adicional para el lunes
+const numInput = document.getElementById('numColegios');
+const container = document.getElementById('colegiosContainer');
+
+// Cada vez que el usuario escribe o cambia el número:
+numInput.addEventListener('input', () => {
+const cantidad = parseInt(numInput.value);
+
+// Limpiamos cualquier contenido previo
+container.innerHTML = '';
+
+// Si el número no es válido o es menor que 1, no hacemos nada
+if (isNaN(cantidad) || cantidad < 1) return;
+
+// Creamos dinámicamente los labels e inputs
+for (let i = 1; i <= cantidad; i++) {
+    const label = document.createElement('label');
+    label.textContent = `Colegio ${i}:`;
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = `Nombre del colegio ${i}`;
+    
+    // Agregamos al contenedor
+    container.appendChild(label);
+    container.appendChild(input);
+}
+});
